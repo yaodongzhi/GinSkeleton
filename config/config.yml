@@ -1,6 +1,7 @@
 AppDebug: true   # 设置程序所处的模式，debug=true 调试模式，日志优先显示在控制台， debug=false 非调试模式，将写入日志文件
 
 HttpServer:
+  UseHttps: true
   Api:
     Port: ":20101"                 #门户网站类端口,注意前面有冒号
   Web:
@@ -11,6 +12,13 @@ HttpServer:
     ProxyServerList:
       - "192.168.10.1"             # nginx 代理服务器ip地址
       - "192.168.10.2"
+  domains:
+    - name: domain1.com
+      cert: domain1.pem
+      key: domain1-key,pem
+    - name: domain2.com
+      cert: domain2.pem
+      key: domain2-key.pem
 
 Token:
   JwtTokenSignKey: "goskeleton"    #设置token生成时加密的签名

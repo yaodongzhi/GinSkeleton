@@ -4,3 +4,5 @@
 /storage/logs/*
 /storage/uploaded/*
 /public/storage
+/book-monitor-go-ht
+/config
